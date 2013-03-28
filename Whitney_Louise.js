@@ -18,8 +18,10 @@ var phoneNumber = function(phone) {
 	var d = b.lastIndexOf("-");
 
 	if (a == 12 || c == 3 || d == 7) {
+		console.log("Your phone number is correct!")
 		return true;
 	} else {
+		console.log("Somthing is wrong!")
 		return false;
 	}
 
@@ -53,6 +55,24 @@ var checkEmail = function(email) {
 		if (at < 1 || dot < at + 2 || dot + 2 >= e.length) {
 			console.log("Make sure your e-mail is correct!")
   			return false;
-  			}
+  		} else {
+  			return true;
+  		}
 };
 checkEmail("louisewhitney@fullsail.edu");
+
+//TitleCase                                                                                  
+var title = function(string) {
+
+	var cap = string.split(" ");
+    
+    	for ( var i = 0; i < cap.length; i++ ) {
+    	
+        	var x = cap[i].charAt(0).toUpperCase();
+       		 cap[i] = x + cap[i].substr(1);
+    	}
+    	console.log("I'm awesome!")
+    return cap.join(" ");
+
+};
+title("Sucess!!");
