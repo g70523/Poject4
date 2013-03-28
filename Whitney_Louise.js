@@ -41,3 +41,18 @@ var stringNumber = function(){
 	console.log(str.valueOf());
 };
 stringNumber(23);
+
+//Email 
+//Email Function
+var checkEmail = function(email) {
+
+	var e = email;
+	var at = e.indexOf("@");
+	var dot = e.lastIndexOf(".");
+
+		if (at < 1 || dot < at + 2 || dot + 2 >= e.length) {
+			console.log("Make sure your e-mail is correct!")
+  			return false;
+  			}
+};
+checkEmail("louisewhitney@fullsail.edu");
