@@ -6,6 +6,8 @@ Project 4
 
 //Start Library
 
+var Library = function() {
+
 // String Functions
 
 
@@ -18,10 +20,8 @@ var phoneNumber = function(phone) {
 	var d = b.lastIndexOf("-");
 
 	if (a == 12 || c == 3 || d == 7) {
-		console.log("Your phone number is correct!")
 		return true;
 	} else {
-		console.log("Somthing is wrong!")
 		return false;
 	}
 
@@ -32,15 +32,15 @@ phoneNumber("123-456-7890");
 var decimalPoint = function(num){
 
 	var n=num.toFixed(4);
-	console.log(n);
+	return n;
 };
-decimalPoint(1.123456);
+//decimalPoint(1.123456);
 
 // Number String
 var stringNumber = function(){
 	
 	var str = 23;
-	console.log(str.valueOf());
+	return str;
 };
 stringNumber(23);
 
@@ -53,7 +53,6 @@ var checkEmail = function(email) {
 	var dot = e.lastIndexOf(".");
 
 		if (at < 1 || dot < at + 2 || dot + 2 >= e.length) {
-			console.log("Make sure your e-mail is correct!")
   			return false;
   		} else {
   			return true;
@@ -71,7 +70,6 @@ var title = function(string) {
         	var x = cap[i].charAt(0).toUpperCase();
        		 cap[i] = x + cap[i].substr(1);
     	}
-    	console.log("I'm awesome!")
     return cap.join(" ");
 
 };
@@ -82,9 +80,28 @@ var smallNumber = function() {
 	var array = [1,4,7,9,10,14,15];
 	var x = Math.max(12,14);
 	for (var x =14; x < array.length; x++);
-	console.log(x);
 	return true;
 };
 smallNumber(14)
 
 
+return{
+	"phoneNumber"	: phoneNumber,
+	"decimalPoint"	: decimalPoint,
+	"stringNumber"	: stringNumber,
+	"checkEmail"	: checkEmail,
+	"title"			: title,
+	"smallNumber"	: smallNumber
+}
+
+};
+
+
+var newLib = new Library();
+
+console.log("phoneNumber: " + newLib.phoneNumber("123-456-7890"));
+console.log("stringNumber: " + newLib.stringNumber("23"));
+console.log("checkEmail: " + newLib.checkEmail("louisewhtiney@fullsail.edu"));
+console.log("title: " + newLib.title("Success!"));
+console.log("smallNumber: " + newLib.smallNumber("14"));
+console.log("decimalPoint: " + newLib.decimalPoint(1.123456));
