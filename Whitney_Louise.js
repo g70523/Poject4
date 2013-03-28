@@ -80,10 +80,11 @@ title("Sucess!!");
 // Smallest Number
 var smallNumber = function() {
 	var array = [1,4,7,9,10,14,15];
-	var x = Math.min(12);
-	for (var x =12; x < array.length; x++);
+	var x = Math.max(12,14);
+	for (var x =14; x < array.length; x++);
 	console.log(x);
 	return true;
 };
-smallNumber(12)
+smallNumber(14)
+
 
