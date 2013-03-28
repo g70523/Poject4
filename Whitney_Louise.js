@@ -29,7 +29,7 @@ phoneNumber("123-456-7890");
 // Decimal  Places
 var decimalPoint = function(num){
 
-	var n=num.toFixed(3);
+	var n=num.toFixed(4);
 	console.log(n);
 };
-decimalPoint(3.14159);
+decimalPoint(1.123456);
