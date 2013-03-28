@@ -76,3 +76,14 @@ var title = function(string) {
 
 };
 title("Sucess!!");
+
+// Smallest Number
+var smallNumber = function() {
+	var array = [1,4,7,9,10,14,15];
+	var x = Math.min(12);
+	for (var x =12; x < array.length; x++);
+	console.log(x);
+	return true;
+};
+smallNumber(12)
+
