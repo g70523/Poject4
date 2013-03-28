@@ -33,3 +33,11 @@ var decimalPoint = function(num){
 	console.log(n);
 };
 decimalPoint(1.123456);
+
+// Number String
+var stringNumber = function(){
+	
+	var str = 23;
+	console.log(str.valueOf());
+};
+stringNumber(23);
