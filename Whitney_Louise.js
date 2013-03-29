@@ -46,7 +46,7 @@ stringNumber(23);
 
 //Email 
 //Email Function
-var checkEmail = function(email) {
+var verifyEmail = function(email) {
 
 	var e = email;
 	var at = e.indexOf("@");
@@ -58,7 +58,7 @@ var checkEmail = function(email) {
   			return true;
   		}
 };
-checkEmail("louisewhitney@fullsail.edu");
+verifyEmail("louisewhitney@fullsail.edu");
 
 //TitleCase                                                                                  
 var title = function(string) {
@@ -80,7 +80,7 @@ var smallNumber = function() {
 	var array = [1,4,7,9,10,14,15];
 	var x = Math.max(12,14);
 	for (var x =14; x < array.length; x++);
-	return true;
+	return x;
 };
 smallNumber(14)
 
@@ -89,7 +89,7 @@ return{
 	"phoneNumber"	: phoneNumber,
 	"decimalPoint"	: decimalPoint,
 	"stringNumber"	: stringNumber,
-	"checkEmail"	: checkEmail,
+	"verifyEmail"	: verifyEmail,
 	"title"			: title,
 	"smallNumber"	: smallNumber
 }
@@ -101,7 +101,7 @@ var newLib = new Library();
 
 console.log("phoneNumber: " + newLib.phoneNumber("123-456-7890"));
 console.log("stringNumber: " + newLib.stringNumber("23"));
-console.log("checkEmail: " + newLib.checkEmail("louisewhtiney@fullsail.edu"));
+console.log("verifyEmail: " + newLib.verifyEmail("louisewhtiney@fullsail.edu"));
 console.log("title: " + newLib.title("Success!"));
 console.log("smallNumber: " + newLib.smallNumber("14"));
 console.log("decimalPoint: " + newLib.decimalPoint(1.123456));
